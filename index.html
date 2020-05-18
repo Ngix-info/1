@@ -17,13 +17,16 @@ window.open();
     </script>
     
  <script>
-$(document).bind('keydown', function(e) {
-  if(e.ctrlKey && (e.which == 83))(e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117)) {
-    e.preventDefault();
-    alert('Ctrl+S');
-    return false;
-  }
-});
+    /*function check(e)
+    {
+    alert(e.keyCode);
+    }*/
+    document.onkeydown = function(e) {
+            if (e.ctrlKey && (e.keyCode === 83 || e.keyCode === 85 || e.keyCode === 73 || e.keyCode === 123)) {//Alt+c, Alt+v will also be disabled sadly.
+                alert('Opss mau apa itu ? ');
+            }
+            return false;
+    };
     </script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
